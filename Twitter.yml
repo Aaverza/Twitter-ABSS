@@ -1,0 +1,62 @@
+---
+default_state: {}
+load_module: Twitter
+environment_agents: []
+environment_params:
+  prob_fake_spread: 0.07
+  prob_real_spread: 0.05
+  prob_neutral_spread: 0.08
+  belief_value_increase: 0.001
+  max_belief_value: 1
+  min_belief_value: 0
+  prob_ext_influence: 0.0
+  prob_nontopic_follow: 0.02
+  total_agents: 1000
+  trending_number: 0.025
+  init_topics: 1
+  max_followers: 0.05
+  min_followers: 0.01
+interval: 1
+max_time: 3
+name: Sim_Twitter_1
+network_agents:
+- agent_type: UserAgent
+  weight: 7
+- agent_type: DeceptionAgent
+  weight: 2
+- agent_type: NewsAgent
+  weight: 1
+network_params:
+  generator: empty_graph
+  n: 1000
+num_trials: 1
+---
+default_state: {}
+load_module: Twitter
+environment_agents: []
+environment_params:
+  prob_fake_spread: 0.07
+  prob_real_spread: 0.05
+  prob_neutral_spread: 0.08
+  belief_value_increase: 0.001
+  max_belief_value: 1
+  min_belief_value: 0
+  prob_ext_influence: 1
+  prob_nontopic_follow: 0.02
+  total_agents: 800
+  trending_number: 0.025
+  init_topics: 1
+  max_followers: 0.05
+  min_followers: 0.01
+interval: 1
+max_time: 250
+name: Sim_Twitter_2
+network_agents:
+- agent_type: UserAgent
+  weight: 7
+- agent_type: NewsAgent
+  weight: 1
+network_params:
+  generator: empty_graph
+  n: 800
+num_trials: 1
